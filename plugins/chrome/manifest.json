@@ -1,0 +1,20 @@
+{
+  "name": "about:blank tab hotkey for Google Chrome",
+  "version": "1.0",
+  "description": "Provides hotkey for opening an about:blank tab",
+  "permissions": ["commands", "tabs"],
+  "commands": {
+    "open-blank-page": {
+      "suggested_key": {
+        "default": "Ctrl+B",
+        "mac": "Command+B"
+      },
+      "description": "Opens an about:blank tab"
+    }
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "manifest_version": 2
+}

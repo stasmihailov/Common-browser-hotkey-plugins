@@ -1,0 +1,12 @@
+{
+  "name": "browser-plugin-blank-page",
+  "version": "1.0.0",
+  "description": "Collection of browser plugins which provide hotkeys for opening an empty page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
