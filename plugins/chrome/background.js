@@ -1,8 +1,26 @@
 const commandName = 'open-blank-page';
 const blankPageUrl = 'about:blank';
 
-chrome.commands.onCommand.addListener(cmd => {
-    if (cmd === commandName) {
-        chrome.tabs.create({url: blankPageUrl});
+const createRedirectingListener = (matchingCommandName, redirectUrl) => cmd => {
+    if (cmd === matchingCommandName) {
+        let prevTab = undefined;
+        chrome.tabs.query({active: true, currentWindow: true}, tabs => {
+            prevTab = tabs[0].id;
+        });
+
+        let blankTab = undefined;
+        chrome.tabs.create({url: redirectUrl}, tab => {
+            blankTab = tab.id;
+        });
+
+        chrome.tabs.onRemoved.addListener(closedTab => {
+            if (closedTab === blankTab) {
+                chrome.tabs.update(prevTab, {highlighted: true});
+            }
+        });
     }
-});
+};
+
+const blankPageListener = createRedirectingListener(commandName, blankPageUrl);
+
+chrome.commands.onCommand.addListener(blankPageListener);
