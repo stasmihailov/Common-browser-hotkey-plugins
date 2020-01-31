@@ -1,6 +1,3 @@
-const commandName = 'open-blank-page';
-const blankPageUrl = 'about:blank';
-
 const createRedirectingListener = (matchingCommandName, redirectUrl) => cmd => {
     if (cmd === matchingCommandName) {
         let prevTab = undefined;
@@ -21,6 +18,5 @@ const createRedirectingListener = (matchingCommandName, redirectUrl) => cmd => {
     }
 };
 
-const blankPageListener = createRedirectingListener(commandName, blankPageUrl);
-
-chrome.commands.onCommand.addListener(blankPageListener);
+chrome.commands.onCommand.addListener(createRedirectingListener('open-blank-page', 'about:blank'));
+chrome.commands.onCommand.addListener(createRedirectingListener('open-extensions-page', 'chrome://extensions'));

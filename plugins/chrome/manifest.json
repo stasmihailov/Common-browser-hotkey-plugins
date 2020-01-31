@@ -10,6 +10,13 @@
         "mac": "Command+B"
       },
       "description": "Opens an about:blank tab"
+    },
+    "open-extensions-page": {
+      "suggested_key": {
+        "default": "Ctrl+X",
+        "mac": "Command+X"
+      },
+      "description": "Opens a chrome://extensions tab"
     }
   },
   "background": {
