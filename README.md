@@ -1,9 +1,9 @@
-This repository contains Chrome plugin which opens `about:blank` on pressing *<ctrl+b>* hotkey.
+This repository contains Chrome plugin which adds following hotkeys:
 
-### What is the point of having a dedicated hotkey for opening a blank page?
-
-Let's say Im of reading some webdev tutorial, and, to sharpen my skills, I want to sketch some html page.
-A blank page is the best fit for that
+| hotkey | action |
+| --- |  --- |
+| <ctrl+b> | go to `about:blank` |
+| <ctrl+x> | go to `chrome://extensions` |
 
 ### Why not use already existing hotkey plugins for chrome?
 
@@ -20,3 +20,8 @@ correlate with default Chrome behaviour
 After encountering this many problems with the most popular "custom hotkey" plugin I could only
 imagine how many problems are there with the rest of them. And also I dont have enough attention span
 to try anything after the first suggested plugin.
+
+### What is the point of having a dedicated hotkey for opening a blank page?
+
+Let's say Im reading some webdev tutorial, and, to sharpen my skills, I want to sketch some html page.
+A blank page is the best option for that
