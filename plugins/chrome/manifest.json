@@ -13,8 +13,8 @@
     },
     "open-extensions-page": {
       "suggested_key": {
-        "default": "Ctrl+X",
-        "mac": "Command+X"
+        "default": "Ctrl+Q",
+        "mac": "Command+Q"
       },
       "description": "Opens a chrome://extensions tab"
     }

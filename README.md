@@ -3,7 +3,7 @@ This repository contains Chrome plugin which adds following hotkeys:
 | hotkey | action |
 | --- |  --- |
 | <ctrl+b> | go to `about:blank` |
-| <ctrl+x> | go to `chrome://extensions` |
+| <ctrl+q> | go to `chrome://extensions` |
 
 ### Why not use already existing hotkey plugins for chrome?
 
