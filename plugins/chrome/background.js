@@ -1,9 +1,15 @@
 const createRedirectingListener = (matchingCommandName, redirectUrl) => cmd => {
-    if (cmd === matchingCommandName) {
-        let prevTab = undefined;
-        chrome.tabs.query({active: true, currentWindow: true}, tabs => {
-            prevTab = tabs[0].id;
-        });
+    if (cmd !== matchingCommandName) {
+        return;
+    }
+
+    chrome.tabs.query({active: true, currentWindow: true}, tabs => {
+        const prevTab = tabs[0].id;
+        const isCalledFromSameTab = tabs[0].url === redirectUrl;
+        console.log(`isCalledFromSameTab: ${isCalledFromSameTab}`);
+        if (isCalledFromSameTab) {
+            return;
+        }
 
         let blankTab = undefined;
         chrome.tabs.create({url: redirectUrl}, tab => {
@@ -12,11 +18,15 @@ const createRedirectingListener = (matchingCommandName, redirectUrl) => cmd => {
 
         chrome.tabs.onRemoved.addListener(closedTab => {
             if (closedTab === blankTab) {
-                chrome.tabs.update(prevTab, {highlighted: true});
+                try {
+                    chrome.tabs.update(prevTab, {highlighted: true});
+                } catch (e) {
+                    // ok - prevTab is already closed
+                }
             }
         });
-    }
+    });
 };
 
 chrome.commands.onCommand.addListener(createRedirectingListener('open-blank-page', 'about:blank'));
-chrome.commands.onCommand.addListener(createRedirectingListener('open-extensions-page', 'chrome://extensions'));
+chrome.commands.onCommand.addListener(createRedirectingListener('open-extensions-page', 'chrome://extensions/'));

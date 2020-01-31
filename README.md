@@ -1,4 +1,5 @@
-This repository contains Chrome plugin which adds following hotkeys:
+This repository contains Chrome plugin which adds following hotkeys
+(they can be remapped in `chrome://extensions/shortcuts`):
 
 | hotkey | action |
 | --- |  --- |
