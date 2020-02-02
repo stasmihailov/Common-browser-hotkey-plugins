@@ -1,5 +1,5 @@
 {
-  "name": "hotkeys for common Google Chrome actions",
+  "name": "Common Hotkeys",
   "version": "1.0",
   "description": "Provides hotkeys for common Google Chrome actions",
   "permissions": ["commands", "tabs"],
