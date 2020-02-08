@@ -20,7 +20,7 @@
     },
     "open-urls-page": {
       "suggested_key": {
-        "default": "Alt+M"
+        "default": "Ctrl+M"
       },
       "description": "Opens a chrome://chrome-urls tab"
     },
