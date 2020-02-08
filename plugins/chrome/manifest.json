@@ -11,10 +11,22 @@
       },
       "description": "Opens an about:blank tab"
     },
+    "open-flags-page": {
+      "suggested_key": {
+        "default": "Alt+X",
+        "mac": "Command+X"
+      },
+      "description": "Opens a chrome://flags tab"
+    },
+    "open-urls-page": {
+      "suggested_key": {
+        "default": "Alt+M"
+      },
+      "description": "Opens a chrome://chrome-urls tab"
+    },
     "open-extensions-page": {
       "suggested_key": {
-        "default": "Ctrl+Q",
-        "mac": "Command+Q"
+        "default": "Alt+Q"
       },
       "description": "Opens a chrome://extensions tab"
     }

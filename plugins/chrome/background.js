@@ -1,3 +1,4 @@
+// vim:set noet sts=0 sw=4 ts=4:
 const createRedirectingListener = (matchingCommandName, redirectUrl) => cmd => {
     if (cmd !== matchingCommandName) {
         return;
@@ -30,3 +31,6 @@ const createRedirectingListener = (matchingCommandName, redirectUrl) => cmd => {
 
 chrome.commands.onCommand.addListener(createRedirectingListener('open-blank-page', 'about:blank'));
 chrome.commands.onCommand.addListener(createRedirectingListener('open-extensions-page', 'chrome://extensions/'));
+chrome.commands.onCommand.addListener(createRedirectingListener('open-flags-page', 'chrome://flags/'));
+chrome.commands.onCommand.addListener(createRedirectingListener('open-urls-page', 'chrome://chrome-urls/'));
+
