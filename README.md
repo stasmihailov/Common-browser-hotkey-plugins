@@ -3,7 +3,6 @@ This repository contains Chrome plugin which adds following hotkeys
 
 | hotkey | action |
 | --- |  --- |
-| <ctrl+b> | go to `about:blank` |
 | <ctrl+q> | go to `chrome://extensions` |
 | <alt+x> | go to `chrome://flags` |
 | <ctrl+m> | go to `chrome://chrome-urls` |
