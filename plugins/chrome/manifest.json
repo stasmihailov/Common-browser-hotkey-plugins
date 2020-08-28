@@ -4,13 +4,6 @@
   "description": "Provides hotkeys for common Google Chrome actions",
   "permissions": ["commands", "tabs"],
   "commands": {
-    "open-blank-page": {
-      "suggested_key": {
-        "default": "Ctrl+B",
-        "mac": "Command+B"
-      },
-      "description": "Opens an about:blank tab"
-    },
     "open-flags-page": {
       "suggested_key": {
         "default": "Alt+X",
